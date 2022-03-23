@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+    <div class="my-4">
+            <h2 class="text-success text-center my-5">Спасибо, заказ оформлен!</h2>
+    </div>
+    <div>
+        <a href="{% url 'store:product_index' %}" class="btn btn-warning w-100 my-2 text-danger fs-4">Вернуться на главную страницу</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1> Товары в корзине:</h1>
+    <div class="container">
+        <div class="row justify-content-between">
+                {% for product in prods %}
+                    <div class="card mb-3 text-light" style="width: 20rem; background-color: #273746">
+                        <div class="card-body">
+                            <h2>{{ product.prod.title }}</h2>
+                            <h4>Колличество: {{ product.quantity }}</h4>
+                            <h4>Цена: {{ product.prod.price }}</h4>
+                            <h4>Итого: {{ product.unit_total }}</h4>
+                            <a class="btn" style='background-color: greenyellow; color: #273746; font-size: 20px'
+                               href="{% url 'store:cart_add' product.prod.pk %}">Добавить</a>
+                            <a class="btn" style='background-color: greenyellow; color: #273746; font-size: 20px'
+                               href="{% url 'store:cart_delete' product.prod.pk %}">Удалить</a>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% if total > 0 %}
+                    <h4>Итого: {{ total }}</h4>
+                    </div>
+                    <form method="post" action="{% url 'store:make_order_view' %}">
+                        {% csrf_token %}
+                        <input class="btn btn-primary" type="submit" value='Оформить заказ'/>
+                    </form>
+                {% else %}
+                    <h4>КОРЗИНА ПУСТА</h4>
+                {% endif %}
+    </div>
+{% endblock %}

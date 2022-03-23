@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="mt-5">
+        <table class="table mb-4">
+            <thead>
+            <tr>
+                <th scope="col">Товар</th>
+                <th scope="col">Количество</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Сумма</th>
+                <th scope="col">Дата</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for order in product %}
+                <tr>
+                    <td>{{ order.product.title }}</td>
+                    <td>{{ order.quantity }}</td>
+                    <td>{{ order.product.price }}</td>
+                    <td>{{ order.get_total }}</td>
+                    <td>{{ order.create_date }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

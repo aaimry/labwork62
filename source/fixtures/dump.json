@@ -1,0 +1,253 @@
+[
+{
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+        "title": "apples",
+        "description": "",
+        "category": "fruits",
+        "residue": 21,
+        "price": "65.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+        "title": "Bananas",
+        "description": "",
+        "category": "fruits",
+        "residue": 541,
+        "price": "100.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+        "title": "milk",
+        "description": "",
+        "category": "drinks",
+        "residue": 328,
+        "price": "60.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+        "title": "coca-cola",
+        "description": "",
+        "category": "drinks",
+        "residue": 35,
+        "price": "80.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+        "title": "bbq souse",
+        "description": "",
+        "category": "other",
+        "residue": 89,
+        "price": "150.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+        "title": "lipton",
+        "description": "",
+        "category": "drinks",
+        "residue": 0,
+        "price": "70.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+        "title": "kefir",
+        "description": "",
+        "category": "drinks",
+        "residue": 426,
+        "price": "80.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+        "title": "SHEKER",
+        "description": "",
+        "category": "other",
+        "residue": 9,
+        "price": "85.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+        "title": "Doshik",
+        "description": "",
+        "category": "other",
+        "residue": 29,
+        "price": "50.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+        "title": "cheese",
+        "description": "",
+        "category": "other",
+        "residue": 8,
+        "price": "400.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+        "title": "Hoegaarden",
+        "description": "",
+        "category": "drinks",
+        "residue": 77,
+        "price": "120.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+        "title": "tomatoes",
+        "description": "",
+        "category": "vegetables",
+        "residue": 57,
+        "price": "200.00"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+        "title": "MARMELADKI",
+        "description": "",
+        "category": "other",
+        "residue": 63,
+        "price": "90.00"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 26,
+    "fields": {
+        "product": 2,
+        "quantity": 1,
+        "user": [
+            "buyer"
+        ],
+        "create_date": "2022-03-22T16:54:31.131Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 31,
+    "fields": {
+        "product": 3,
+        "quantity": 2,
+        "user": [
+            "buyer"
+        ],
+        "create_date": "2022-03-23T04:33:50.630Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 32,
+    "fields": {
+        "product": 9,
+        "quantity": 2,
+        "user": [
+            "buyer"
+        ],
+        "create_date": "2022-03-23T04:33:50.726Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 33,
+    "fields": {
+        "product": 11,
+        "quantity": 3,
+        "user": [
+            "buyer"
+        ],
+        "create_date": "2022-03-23T04:33:51.119Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 34,
+    "fields": {
+        "product": 13,
+        "quantity": 1,
+        "user": [
+            "buyer"
+        ],
+        "create_date": "2022-03-23T04:33:51.599Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 35,
+    "fields": {
+        "product": 5,
+        "quantity": 1,
+        "user": [
+            "moderator"
+        ],
+        "create_date": "2022-03-23T04:34:29.718Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 36,
+    "fields": {
+        "product": 8,
+        "quantity": 1,
+        "user": [
+            "moderator"
+        ],
+        "create_date": "2022-03-23T04:34:29.814Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 37,
+    "fields": {
+        "product": 10,
+        "quantity": 1,
+        "user": [
+            "moderator"
+        ],
+        "create_date": "2022-03-23T04:34:29.916Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 38,
+    "fields": {
+        "product": 12,
+        "quantity": 3,
+        "user": [
+            "moderator"
+        ],
+        "create_date": "2022-03-23T04:34:30.012Z"
+    }
+}
+]

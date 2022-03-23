@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Check product {{ product.pk }} {% endblock %}
+{% block nav %}
+    {% if perms.store.change_products %}
+        <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="{% url 'store:product_update' product.pk %}">Изменить товар</a>
+        </li>
+    {% endif %}
+    {% if perms.store.delete_products %}
+        <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="{% url 'store:product_delete' product.pk %}">Удалить товар</a>
+        </li>
+    {% endif %}
+    {% if perms.store.add_products %}
+        <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="{% url 'store:product_create' %}">+Добавить новый товар</a>
+        </li>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <h1>Товар:{{ product.title }}</h1>
+    {% if product.description == '' %}
+        <h3>Описание отсутствует</h3>
+    {% else %}
+        <h3>Описание: {{ product.description }}</h3>
+    {% endif %}
+    <h3>Категория: {{ product.get_category_display }}</h3>
+    <h3>Цена:{{ product.price }}</h3>
+    <h3>Остаток:{{ product.residue }}</h3>
+    <a class="btn text-light" style='background-color: greenyellow; color: #273746; font-size: 30px'
+       href="{% url 'store:cart_add' product.pk %}">Добавить
+        в корзину</a>
+{% endblock %}
