@@ -35,7 +35,7 @@
                                href="{% url 'accounts:register' %}?next={{ request.get_full_path }}">Регистрация</a>
                         </li>
                     {% else %}
-                        {% if perms.store.add_products %}
+                        {% if perms.store.add_product %}
                             <li class="nav-item">
                                 <a class="nav-link text-light fs-5" aria-current="page"
                                    href="{% url 'store:product_create' %}">+Добавить продукт</a>
