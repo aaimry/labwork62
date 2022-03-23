@@ -120,7 +120,7 @@ class ProductCreateView(PermissionRequiredMixin, StatMixin, CreateView):
     model = Product
     form_class = ProductForm
     template_name = "products/create.html"
-    permission_required = 'webapp.add_product'
+    permission_required = 'store.add_product'
 
     def get_success_url(self):
         return reverse('store:product_view', kwargs={'pk': self.object.pk})
@@ -130,7 +130,7 @@ class ProductUpdateView(PermissionRequiredMixin, StatMixin, UpdateView):
     model = Product
     form_class = ProductForm
     template_name = "products/update.html"
-    permission_required = 'webapp.change_product'
+    permission_required = 'store.change_product'
 
     def get_success_url(self):
         return reverse('store:product_view', kwargs={'pk': self.object.pk})
@@ -139,7 +139,7 @@ class ProductUpdateView(PermissionRequiredMixin, StatMixin, UpdateView):
 class ProductDeleteView(PermissionRequiredMixin, StatMixin, DeleteView):
     model = Product
     template_name = 'products/delete.html'
-    permission_required = 'webapp.delete_product'
+    permission_required = 'store.delete_product'
 
     def get_success_url(self):
         return reverse('store:product_index')
