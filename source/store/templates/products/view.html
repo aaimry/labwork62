@@ -2,17 +2,17 @@
 
 {% block title %} Check product {{ product.pk }} {% endblock %}
 {% block nav %}
-    {% if perms.store.change_products %}
+    {% if perms.store.change_product %}
         <li class="nav-item">
             <a class="nav-link text-light" aria-current="page" href="{% url 'store:product_update' product.pk %}">Изменить товар</a>
         </li>
     {% endif %}
-    {% if perms.store.delete_products %}
+    {% if perms.store.delete_product %}
         <li class="nav-item">
             <a class="nav-link text-light" aria-current="page" href="{% url 'store:product_delete' product.pk %}">Удалить товар</a>
         </li>
     {% endif %}
-    {% if perms.store.add_products %}
+    {% if perms.store.add_product %}
         <li class="nav-item">
             <a class="nav-link text-light" aria-current="page" href="{% url 'store:product_create' %}">+Добавить новый товар</a>
         </li>
