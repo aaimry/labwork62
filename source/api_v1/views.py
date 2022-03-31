@@ -29,11 +29,12 @@ class LogoutView(APIView):
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    permission_classes = (IsAdminUser,)
 
-    def has_permissions(self, request, view):
+    def get_permissions(self):
         if self.request.method in SAFE_METHODS:
             return [AllowAny()]
-        return [IsAdminUser]
+        return super(ProductViewSet, self).get_permissions()
 
 
 class OrderViewSet(viewsets.ModelViewSet):
@@ -48,6 +49,6 @@ class OrderViewSet(viewsets.ModelViewSet):
             serializer.save(user=None)
 
     def get_permissions(self):
-        if self.request.method == "POST":
+        if self.request.method in ["POST"]:
             return [AllowAny()]
         return super(OrderViewSet, self).get_permissions()
