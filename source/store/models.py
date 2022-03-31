@@ -42,7 +42,6 @@ class Order(models.Model):
         total = self.product.price * self.quantity
         return total
 
-
     class Meta:
         db_table = 'Orders'
         verbose_name = 'Заказ'
